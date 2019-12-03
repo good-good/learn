@@ -114,15 +114,15 @@ public class homework{
         // System.out.println("Today is the "+index+" day of the year.");
 
         //6.打印九九乘法表
-        for(int i = 1;i<=9;i++){
-            for(int j = 1;j<=i;j++){
-                System.out.print(j+" * "+i+" = "+(i*j)+"   ");
-                if(j==i){
-                    System.out.print('\n');
-                    continue;
-                }
-            }
-        }
+        // for(int i = 1;i<=9;i++){
+        //     for(int j = 1;j<=i;j++){
+        //         System.out.print(j+" * "+i+" = "+(i*j)+"\t");
+        //         if(j==i){
+        //             System.out.print('\n');
+        //             continue;
+        //         }
+        //     }
+        // }
 
 
         //7.打印等腰三角形
