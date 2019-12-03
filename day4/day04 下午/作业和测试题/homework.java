@@ -123,7 +123,7 @@ public class homework{
         // System.out.println("Today is the "+index+" day of the year.");
 
         //6.打印九九乘法表
-
+            
         //7.打印等腰三角形
     }
 }
