@@ -86,8 +86,6 @@ public class homework{
         //     switch(j){
         //         case 1:{
         //             index += day;
-        //             System.out.println("month 1");
-        //             if(month==1)break;
         //         }break;
         //         case 2:
         //         case 4:
@@ -96,8 +94,6 @@ public class homework{
         //         case 9:
         //         case 11:{
         //             index+=31;
-        //             System.out.println("month 2");
-        //             if(month==2)break;
         //         }break;
         //         case 3:{
         //             if(((year%4==0)&&(year%100!=0))||(year%400==0)){//leap year
@@ -105,17 +101,12 @@ public class homework{
         //             }else{//common year
         //                 index+=28;
         //             }
-        //             System.out.println("month 3");
-        //             if(month==3)break;
         //         }break;
-
         //         case 5:
         //         case 7:
         //         case 10:
         //         case 12:{
         //             index+=30;
-        //             System.out.println("month 5");
-        //             if(month==5)break;
         //         }break;
 
         //     }
@@ -123,23 +114,33 @@ public class homework{
         // System.out.println("Today is the "+index+" day of the year.");
 
         //6.打印九九乘法表
+        for(int i = 1;i<=9;i++){
+            for(int j = 1;j<=i;j++){
+                System.out.print(j+" * "+i+" = "+(i*j)+"   ");
+                if(j==i){
+                    System.out.print('\n');
+                    continue;
+                }
+            }
+        }
+
 
         //7.打印等腰三角形
-        //采集一个奇数
-        Scanner input = new Scanner(System.in);
-        System.out.print("Please input a integer: ");
-        int count = input.nextInt();
-        //除以 2 计算出最多空格数
-        int blankCountMax = count/2;
-        //输出
-        for(int i = 0;i<count;i++){
-            for(int j = 0;j<count-i-1;j++){
-                System.out.print(' ');
-            }
-            for(int k = 0;k<(count-blankCountMax*2)+i*2;k++){
-                System.out.print('*');
-            }
-            System.out.print('\n'); 
-        }
+        // //采集一个奇数
+        // Scanner input = new Scanner(System.in);
+        // System.out.print("Please input a integer: ");
+        // int count = input.nextInt();
+        // //除以 2 计算出最多空格数
+        // int blankCountMax = count/2;
+        // //输出
+        // for(int i = 0;i<count;i++){
+        //     for(int j = 0;j<count-i-1;j++){
+        //         System.out.print(' ');
+        //     }
+        //     for(int k = 0;k<(count-blankCountMax*2)+i*2;k++){
+        //         System.out.print('*');
+        //     }
+        //     System.out.print('\n'); 
+        // }
     }
 }
