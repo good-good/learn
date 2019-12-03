@@ -71,55 +71,59 @@ public class homework{
         // 4 求出1-1/2+1/3-1/4…..1/100的和 [动脑]
 
         // 5.输入年月日，判断该日是当年的第几天 
-        Scanner input = new Scanner(System.in);
-        System.out.println("Please input a particular date. ");
-        System.out.println("Please input a particular year: ");
-        short year = input.nextShort();
-        System.out.println("Please input a particular month: ");
-        byte month = input.nextByte();
-        System.out.println("Please input a particular day: ");
-        byte day = input.nextByte();
-        short index = 0;
+        // Scanner input = new Scanner(System.in);
+        // System.out.println("Please input a particular date. ");
+        // System.out.println("Please input a particular year: ");
+        // short year = input.nextShort();
+        // System.out.println("Please input a particular month: ");
+        // byte month = input.nextByte();
+        // System.out.println("Please input a particular day: ");
+        // byte day = input.nextByte();
+        // short index = 0;
 
-        for(int j = 1;j<= month;j++){
-            System.out.println("index "+j);
-            switch(j){
-                case 1:{
-                    index += day;
-                    System.out.println("month 1");
-                    if(month==1)break;
-                }break;
-                case 2:
-                case 4:
-                case 6:
-                case 8:
-                case 9:
-                case 11:{
-                    index+=31;
-                    System.out.println("month 2");
-                    if(month==2)break;
-                }break;
-                case 3:{
-                    if(((year%4==0)&&(year%100!=0))||(year%400==0)){//leap year
-                        index+=29;
-                    }else{//common year
-                        index+=28;
-                    }
-                    System.out.println("month 3");
-                    if(month==3)break;
-                }break;
+        // for(int j = 1;j<= month;j++){
+        //     System.out.println("index "+j);
+        //     switch(j){
+        //         case 1:{
+        //             index += day;
+        //             System.out.println("month 1");
+        //             if(month==1)break;
+        //         }break;
+        //         case 2:
+        //         case 4:
+        //         case 6:
+        //         case 8:
+        //         case 9:
+        //         case 11:{
+        //             index+=31;
+        //             System.out.println("month 2");
+        //             if(month==2)break;
+        //         }break;
+        //         case 3:{
+        //             if(((year%4==0)&&(year%100!=0))||(year%400==0)){//leap year
+        //                 index+=29;
+        //             }else{//common year
+        //                 index+=28;
+        //             }
+        //             System.out.println("month 3");
+        //             if(month==3)break;
+        //         }break;
 
-                case 5:
-                case 7:
-                case 10:
-                case 12:{
-                    index+=30;
-                    System.out.println("month 5");
-                    if(month==5)break;
-                }break;
+        //         case 5:
+        //         case 7:
+        //         case 10:
+        //         case 12:{
+        //             index+=30;
+        //             System.out.println("month 5");
+        //             if(month==5)break;
+        //         }break;
 
-            }
-        }
-        System.out.println("Today is the "+index+" day of the year.");
+        //     }
+        // }
+        // System.out.println("Today is the "+index+" day of the year.");
+
+        //6.打印九九乘法表
+
+        //7.打印等腰三角形
     }
 }
