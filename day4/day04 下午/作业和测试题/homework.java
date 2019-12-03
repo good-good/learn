@@ -69,6 +69,15 @@ public class homework{
 
 
         // 4 求出1-1/2+1/3-1/4…..1/100的和 [动脑]
+        double sum = 0.0;
+        double temp = 0.0;
+        for(int i = 0;i<100;i++){
+            temp = Math.pow(-1,i)/(i+1);
+            sum += temp;
+        }
+        System.out.println(sum);
+
+
 
         // 5.输入年月日，判断该日是当年的第几天 
         // Scanner input = new Scanner(System.in);
