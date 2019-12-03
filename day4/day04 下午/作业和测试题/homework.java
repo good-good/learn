@@ -123,7 +123,23 @@ public class homework{
         // System.out.println("Today is the "+index+" day of the year.");
 
         //6.打印九九乘法表
-            
+
         //7.打印等腰三角形
+        //采集一个奇数
+        Scanner input = new Scanner(System.in);
+        System.out.print("Please input a integer: ");
+        int count = input.nextInt();
+        //除以 2 计算出最多空格数
+        int blankCountMax = count/2;
+        //输出
+        for(int i = 0;i<count;i++){
+            for(int j = 0;j<count-i-1;j++){
+                System.out.print(' ');
+            }
+            for(int k = 0;k<(count-blankCountMax*2)+i*2;k++){
+                System.out.print('*');
+            }
+            System.out.print('\n'); 
+        }
     }
 }
