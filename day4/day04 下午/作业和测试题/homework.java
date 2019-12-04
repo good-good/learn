@@ -152,5 +152,54 @@ public class homework{
         //     }
         //     System.out.print('\n'); 
         // }
+
+        //打印空心菱形
+        // Scanner input = new Scanner(System.in);
+        // System.out.print("Please input a integer: ");
+        // int totalLevel = input.nextInt();
+        // for(int i = 0;i<totalLevel;i++){
+        //     for(int k = 0;k<totalLevel-i-1;k++){
+        //         System.out.print(' ');
+        //     }
+        //     for(int j = 0;j<=i*2;j++){
+        //         if(((0==j)||(i*2==j))){
+        //             System.out.print('*');
+        //         }else{
+        //             System.out.print(' ');
+        //         }
+                
+        //     }
+        //     System.out.println();
+        // } 
+        // for(int i = 0;i<totalLevel-1;i++){
+        //     for(int k = 0;k<i+1;k++){
+        //         System.out.print(' ');
+        //     }
+        //     for(int j = 1;j<=(totalLevel-i-1)*2-1;j++){
+        //         if((1==j)||((totalLevel-i-1)*2-1==j)){
+        //             System.out.print('*');
+        //         }else{
+        //             System.out.print(' ');
+        //         }
+                
+        //     }
+        //     System.out.println();
+        // }
+
+
+        // 求1+（1+2）+（1+2+3）+（1+2+3+4）+...+(1+2+3+..+100)的结果
+        // int sum = 0;
+        // int num = 0;
+        // Scanner input = new Scanner(System.in);
+        // System.out.print("Please input a integer: ");
+        // int totalLevel = input.nextInt();
+        // for(int i = 1;i<=totalLevel;i++){
+        //     num = 0;
+        //     for(int j = 1;j<=i;j++){
+        //         num += j;
+        //     }
+        //     sum += num;
+        // }
+        // System.out.println("Sum is: "+ sum);
     }
 }
