@@ -17,11 +17,12 @@ public class homework{
 
         
         // 2 
+        // 至少有一次，所以应该用 do-while
         // Scanner input = new Scanner(System.in);
-        // int num1 = 0;
-        // int num2 = 0;
+        // int num1 = 10;
+        // int num2 = 5;
         // byte choice = 1;
-        // while(choice!=0){
+        // do{
         //     System.out.println("-------------Calculator---------------");
         //     System.out.println("1. addition");
         //     System.out.println("2. subtraction");
@@ -30,10 +31,10 @@ public class homework{
         //     System.out.println("0. exit");
         //     System.out.print("Please enter your choice: ");
         //     choice = input.nextByte();
-        //     System.out.print("Please input number 1 :");
-        //     num1 = input.nextInt();
-        //     System.out.print("Please input number 2 :");
-        //     num2 = input.nextInt();
+        //     // System.out.print("Please input number 1 :");
+        //     // num1 = input.nextInt();
+        //     // System.out.print("Please input number 2 :");
+        //     // num2 = input.nextInt();
             
         //     switch(choice){
         //         case 1:{
@@ -55,7 +56,7 @@ public class homework{
         //             System.out.println("Input error.");
         //         }break;
         //     }
-        // }
+        // }while(choice!=0);
         
 
 
@@ -69,13 +70,13 @@ public class homework{
 
 
         // 4 求出1-1/2+1/3-1/4…..1/100的和 [动脑]
-        double sum = 0.0;
-        double temp = 0.0;
-        for(int i = 0;i<100;i++){
-            temp = Math.pow(-1,i)/(i+1);
-            sum += temp;
-        }
-        System.out.println(sum);
+        // double sum = 0.0;
+        // double temp = 0.0;
+        // for(int i = 0;i<100;i++){
+        //     temp = Math.pow(-1,i)/(i+1);
+        //     sum += temp;
+        // }
+        // System.out.println(sum);
 
 
 
