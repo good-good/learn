@@ -5,7 +5,7 @@ import java.util
 import org.apache.flink.api.common.functions.RuntimeContext
 import org.apache.flink.streaming.api.scala._
 import org.apache.flink.streaming.connectors.elasticsearch.{ElasticsearchSinkFunction, RequestIndexer}
-import org.apache.flink.streaming.connectors.elasticsearch6.ElasticsearchSink
+import org.apache.flink.streaming.connectors.elasticsearch7.ElasticsearchSink
 import org.apache.http.HttpHost
 import org.elasticsearch.client.Requests
 
