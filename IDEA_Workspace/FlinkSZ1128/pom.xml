@@ -17,11 +17,11 @@ specific language governing permissions and limitations
 under the License.
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.atgp</groupId>
+	<groupId>com.atguigu</groupId>
 	<artifactId>FlinkSZ1128</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
@@ -57,14 +57,55 @@ under the License.
 			<groupId>org.apache.flink</groupId>
 			<artifactId>flink-scala_${scala.binary.version}</artifactId>
 			<version>${flink.version}</version>
-<!--			<scope>provided</scope>-->
+			<!--			<scope>provided</scope>-->
 		</dependency>
 		<dependency>
 			<groupId>org.apache.flink</groupId>
 			<artifactId>flink-streaming-scala_${scala.binary.version}</artifactId>
 			<version>${flink.version}</version>
-<!--			<scope>provided</scope>-->
+			<!--			<scope>provided</scope>-->
 		</dependency>
+
+		<dependency>
+			<groupId>org.apache.flink</groupId>
+			<artifactId>flink-cep-scala_${scala.binary.version}</artifactId>
+			<version>${flink.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.flink</groupId>
+			<artifactId>flink-table-api-scala-bridge_2.11</artifactId>
+			<version>1.10.0</version>
+			<!--			<scope>provided</scope>-->
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.flink</groupId>
+			<artifactId>flink-table-planner_2.11</artifactId>
+			<version>1.10.0</version>
+			<!--			<scope>provided</scope>-->
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.flink</groupId>
+			<artifactId>flink-table-planner-blink_2.11</artifactId>
+			<version>1.10.0</version>
+			<!--			<scope>provided</scope>-->
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.flink</groupId>
+			<artifactId>flink-table-common</artifactId>
+			<version>1.10.0</version>
+			<!--			<scope>provided</scope>-->
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.flink</groupId>
+			<artifactId>flink-csv</artifactId>
+			<version>1.10.0</version>
+		</dependency>
+
 		<dependency>
 			<groupId>org.apache.flink</groupId>
 			<artifactId>flink-connector-kafka-0.11_2.11</artifactId>
@@ -85,7 +126,7 @@ under the License.
 
 		<dependency>
 			<groupId>org.apache.flink</groupId>
-			<artifactId>flink-connector-elasticsearch6_2.11</artifactId>
+			<artifactId>flink-connector-elasticsearch7_2.11</artifactId>
 			<version>1.10.0</version>
 		</dependency>
 
@@ -95,18 +136,12 @@ under the License.
 			<version>5.1.44</version>
 		</dependency>
 
-		<dependency>
-			<groupId>org.apache.flink</groupId>
-			<artifactId>flink-cep-scala_${scala.binary.version}</artifactId>
-			<version>${flink.version}</version>
-		</dependency>
-
 		<!-- Scala Library, provided by Flink as well. -->
 		<dependency>
 			<groupId>org.scala-lang</groupId>
 			<artifactId>scala-library</artifactId>
 			<version>${scala.version}</version>
-<!--			<scope>provided</scope>-->
+			<!--			<scope>provided</scope>-->
 		</dependency>
 
 		<!-- Add connector dependencies here. They must be in the default scope (compile). -->
@@ -174,7 +209,7 @@ under the License.
 							</filters>
 							<transformers>
 								<transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-									<mainClass>com.atgp.day1.WordCountBatch</mainClass>
+									<mainClass>com.atguigu.day1.WordCountFromBatch</mainClass>
 								</transformer>
 							</transformers>
 						</configuration>

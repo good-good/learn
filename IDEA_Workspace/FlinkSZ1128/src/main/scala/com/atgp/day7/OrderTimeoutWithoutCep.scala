@@ -2,6 +2,7 @@ package com.atgp.day7
 
 
 
+    import java.util.Date
     import org.apache.flink.api.common.state.ValueStateDescriptor
     import org.apache.flink.cep.scala.CEP
     import org.apache.flink.cep.scala.pattern.Pattern
@@ -13,6 +14,7 @@ package com.atgp.day7
     import scala.collection.Map
 object OrderTimeoutWithoutCep {
         case class OrderEvent(orderId:String,eventType:String,eventTime:Long)
+
 
         def main(args: Array[String]): Unit = {
             val env = StreamExecutionEnvironment.getExecutionEnvironment
@@ -43,6 +45,9 @@ object OrderTimeoutWithoutCep {
         )
         override def processElement(value: OrderEvent, ctx: KeyedProcessFunction[String, OrderEvent, String]#Context, out: Collector[String]): Unit = {
             //到来的事件是下订单事件
+            val date = new Date()
+            println(ctx.timerService().currentWatermark() +" processElement")
+            println(value.eventTime+" eventTime processElement")
             if(value.eventType.equals("create")){
                 if(orderState.value() == null){//要保证pay事件没有提前到
                     orderState.update(value)
@@ -56,6 +61,9 @@ object OrderTimeoutWithoutCep {
 
         override def onTimer(timestamp: Long, ctx: KeyedProcessFunction[String, OrderEvent, String]#OnTimerContext, out: Collector[String]): Unit = {
             val order = orderState.value()
+            val date = new Date()
+            println(ctx.timerService().currentWatermark() +" onTimer")
+            println(timestamp+" temistamp")
             if(order != null && order.eventType.equals("create")){
                 ctx.output(new OutputTag[String]("timeout"),"超时订单的ID为： "+ order.orderId)
             }

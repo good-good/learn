@@ -2,8 +2,16 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="37b03f05-a4b5-46ae-8a22-6c211c677ea9" name="myssh" url="http://hadoop102">
+      <webServer id="37b03f05-a4b5-46ae-8a22-6c211c677ea9" name="hadoop102" url="http://hadoop102">
         <fileTransfer host="hadoop102" port="22" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="b8491a54-62df-4455-a91e-c31a20bd6ac2" name="hadoop103" url="http://hadoop103">
+        <fileTransfer host="hadoop103" port="22" accessType="SFTP">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>
